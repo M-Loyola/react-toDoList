@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -31,5 +34,28 @@ body {
 
 .todoList {
   background-color: rgb(200, 202, 167);
-  padding: 10em;
+  padding: 3em;
+}
+
+.todoGenerator {
+  margin: 10px;
+}
+
+.inputTodo {
+  border-radius: 40px;
+  width: 300px;
+}
+
+button.submitInput {
+  background-color: antiquewhite;
+  margin: 10px;
+  width: 50px;
+  border-radius: 40px;
+}
+
+button.submitInput :hover{
+  background-color: rgb(163, 132, 92);
+  margin: 10px;
+  width: 50px;
+  border-radius: 40px;
 }

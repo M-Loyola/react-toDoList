@@ -1,18 +1,28 @@
 import { useState } from "react";
+import '../App.css';
 
 const TodoGenerator = (props) => {
     const [inputValue, setInputValue] = useState("");
+    const [alertMessage, setAlertMessage] = useState("");
     
     const addTodoItem = () => {
-        props.onInputChange(inputValue);
-        setInputValue("");
+        if(inputValue === "") {
+            setAlertMessage("Please add an item!")
+        } else {
+            props.onInputChange(inputValue);
+            setAlertMessage("");
+            setInputValue("");
+        }
     }
 
     return (
+        <>
         <div className="todoGenerator">
-            <input value={inputValue} onChange={event => setInputValue(event.target.value)}/>
-            <button onClick={addTodoItem}>add</button>
+            <input className="inputTodo" value={inputValue} onChange={event => setInputValue(event.target.value)}/>
+            <button className="submitInput" onClick={addTodoItem}>add</button>
         </div>
+        <div>{alertMessage}</div>
+        </>
     );
 }
 
