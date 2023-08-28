@@ -6,7 +6,7 @@ const TodoGenerator = (props) => {
     const [alertMessage, setAlertMessage] = useState("");
     
     const addTodoItem = () => {
-        if(inputValue === "") {
+        if(!inputValue.match(/[a-z]/i)) {
             setAlertMessage("Please add an item!")
         } else {
             props.onInputChange(inputValue);
