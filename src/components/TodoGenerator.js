@@ -1,5 +1,4 @@
 import { useState } from "react";
-import TodoGroup from "./TodoGroup";
 
 const TodoGenerator = (props) => {
     const [inputValue, setInputValue] = useState("");

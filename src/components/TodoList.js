@@ -3,12 +3,13 @@ import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 
 const TodoList = () => {
-    const [input, setInput] = useState("");
+    const [todoListItems, setTodoListItems] = useState([]);
+
     return (
         <>
         <div>Todo List</div>
-        <TodoGroup input={input}/>
-        <TodoGenerator onInputChange={(input)=>  setInput(input)}/>
+        <TodoGroup todoListItems={todoListItems}/>
+        <TodoGenerator onInputChange={(input)=>  setTodoListItems(todoListItems.concat(input))}/>
         </>
     );
 }
