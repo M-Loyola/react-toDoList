@@ -18,7 +18,12 @@ const TodoGenerator = (props) => {
     return (
         <>
         <div className="todoGenerator">
-            <input className="inputTodo" value={inputValue} onChange={event => setInputValue(event.target.value)}/>
+            <input 
+                placeholder="Please enter text" 
+                className="inputTodo" 
+                value={inputValue} 
+                onChange={event => setInputValue(event.target.value)}
+            />
             <button className="submitInput" onClick={addTodoItem}>add</button>
         </div>
         <div>{alertMessage}</div>
