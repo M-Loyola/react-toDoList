@@ -5,11 +5,12 @@ const TodoGenerator = (props) => {
     
     const addTodoItem = () => {
         props.onInputChange(inputValue);
+        setInputValue("");
     }
 
     return (
         <div className="todoGenerator">
-            <input onChange={event => setInputValue(event.target.value)}/>
+            <input value={inputValue} onChange={event => setInputValue(event.target.value)}/>
             <button onClick={addTodoItem}>add</button>
         </div>
     );
