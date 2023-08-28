@@ -1,6 +1,8 @@
+import '../App.css';
+
 const TodoItem = (props) => {
     return (
-        <div>{props.input}</div>
+        <div className="todoItem">{props.input}</div>
     );
 }
 
