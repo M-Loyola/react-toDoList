@@ -41,6 +41,12 @@ body {
   margin: 10px;
 }
 
+.todoGenerator button:hover {
+  background: rgb(115, 151, 117);
+  color: black;
+  transition: .3s;
+}
+
 .inputTodo {
   border-radius: 40px;
   width: 300px;
