@@ -1,6 +1,6 @@
-const TodoItem = () => {
+const TodoItem = (props) => {
     return (
-        <div>Something</div>
+        <div>{props.input}</div>
     );
 }
 

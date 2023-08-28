@@ -1,8 +1,17 @@
-const TodoGenerator = () => {
+import { useState } from "react";
+import TodoGroup from "./TodoGroup";
+
+const TodoGenerator = (props) => {
+    const [inputValue, setInputValue] = useState("");
+    
+    const addTodoItem = () => {
+        props.onInputChange(inputValue);
+    }
+
     return (
         <div className="todoGenerator">
-            <input/>
-            <button>add</button>
+            <input onChange={event => setInputValue(event.target.value)}/>
+            <button onClick={addTodoItem}>add</button>
         </div>
     );
 }
