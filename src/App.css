@@ -3,16 +3,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, rgb(200, 202, 167), #ffffff)
+}
+
+body {
+  background-color: rgb(200, 202, 167);
 }
 
 .todoItem {
   border: 1px solid black;
   border-radius: 10px;
-  background-color: rgba(137, 141, 123, 0.572);
   padding: 10px;
   width: 800px;
   margin-bottom: 10px;
+  background-color: rgb(169, 174, 131);
 }
 
 .todoGroup {
@@ -30,6 +33,7 @@
 }
 
 .todoList {
+  background-color: rgb(200, 202, 167);
   padding: 3em;
 }
 
